@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BatoBuzz - Nepalese Handicraft Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- first i create header section but i'll change and merge with the form -->
+    <div class="form-box">
+        <!-- Toggle Controls -->
+        <input type="radio" name="form-toggle" id="login-toggle" checked class="form-toggle">
+        <input type="radio" name="form-toggle" id="register-toggle" class="form-toggle">
+        <input type="radio" name="form-toggle" id="reset-toggle" class="form-toggle">
+
+        <!-- Notification Area -->
+        <div id="notification" class="notification"></div>
+
+        <div class="logo-container">
+        <div class="logo">
+        <!-- <div class="logo-icon"></div> -->
+         <img src="c:\Users\harij\Downloads\FB_IMG_1756615213625.ico" alt="BatoBuzz Logo" class="logo-icon" style="width:50px; height:50px;">
+        </div>
+        <div class="logo-text">Bato<span>Buzz</span></div>
+        <p class="tagline">Pvt.Ltd Technology.</p>
+    </div>
+        <!-- Login Form -->
+        <div id="login-form">
+            <div class="form-header">
+                <h1>Welcome Back</h1>
+                <p>Sign in to continue to BatoBuzz</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="login-email" class="input-label">Email Address</label>
+                    <input type="email" id="login-email" class="input-field" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group password-toggle">
+                    <label for="login-password" class="input-label">Password</label>
+                    <input type="password" id="login-password" class="input-field" placeholder="Enter your password" required>
+                    <span class="toggle-password" id="toggleLoginPassword">
+                        <i class="far fa-eye"></i>
+                    </span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign In</button>
+
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="#" onclick="showRegister(); return false;">Sign up</a></p>
+                    <p><a href="#" onclick="showReset(); return false;">Forgot your password?</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="register-form">
+            <div class="form-header">
+                <h1>Create Account</h1>
+                <p>Join the BatoBuzz community</p>
+            </div>
+
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="register-name" class="input-label">Full Name</label>
+                    <input type="text" id="register-name" class="input-field" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="register-email" class="input-label">Email Address</label>
+                    <input type="email" id="register-email" class="input-field" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group password-toggle">
+                    <label for="register-password" class="input-label">Password</label>
+                    <input type="password" id="register-password" class="input-field" placeholder="Create a password" required>
+                    <span class="toggle-password" id="toggleRegPassword">
+                        <i class="far fa-eye"></i>
+                    </span>
+                </div>
+
+                <div class="input-group password-toggle">
+                    <label for="register-confirm" class="input-label">Confirm Password</label>
+                    <input type="password" id="register-confirm" class="input-field" placeholder="Confirm your password" required>
+                    <span class="toggle-password" id="toggleRegConfirm">
+                        <i class="far fa-eye"></i>
+                    </span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create Account</button>
+
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" onclick="showLogin(); return false;">Sign in</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Password Reset Form -->
+        <div id="reset-form">
+            <div class="form-header">
+                <h1>Reset Password</h1>
+                <p>Enter your email to reset your password</p>
+            </div>
+
+            <form id="resetForm">
+                <div class="input-group">
+                    <label for="reset-email" class="input-label">Email Address</label>
+                    <input type="email" id="reset-email" class="input-field" placeholder="Enter your email" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Reset Password</button>
+
+                <div class="form-footer">
+                    <p>Remember your password? <a href="#" onclick="showLogin(); return false;">Back to login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
